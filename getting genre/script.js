@@ -20,11 +20,11 @@ function genreCheck() {
                 doesGenreMatch = null
                 function getTagName(element, index, array) {
                     if(element.name === genreValue) {
-                        doesGenreMatch = 'yes'
+                        doesGenreMatch = true
                     } else {}
                 }
                 tagList.forEach(getTagName);
-                if(doesGenreMatch === 'yes'){
+                if(doesGenreMatch === true){
                     $('body').append('<p>Yay! ' + searchValue + ' is a ' + genreValue + ' band</p>');
                 } else {
                     $('body').append('<p>Nay! ' + searchValue + ' is not a ' + genreValue + ' band</p>');
@@ -32,7 +32,7 @@ function genreCheck() {
             }
         })
     })
-};
+}
 
 $(document).ready(function(){    
     $('#submit').click(function(){
