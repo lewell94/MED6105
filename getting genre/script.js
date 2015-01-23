@@ -19,13 +19,9 @@ function genreCheck() {
             } else {
                 doesGenreMatch = null
                 function getTagName(element, index, array) {
-                    //$('body').append('<p>' + element.name + ': </p>');
                     if(element.name === genreValue) {
-                        //$('body').append('<p style="border-bottom:1px solid black;">yay</p>');
                         doesGenreMatch = 'yes'
-                    } else {    
-                        //$('body').append('<p style="border-bottom:1px solid black;">nay</p>');
-                    }
+                    } else {}
                 }
                 tagList.forEach(getTagName);
                 if(doesGenreMatch === 'yes'){
