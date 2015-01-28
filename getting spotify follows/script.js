@@ -11,9 +11,6 @@ function artistSearch() {
             bandId = (allResults[0].id);
             $.get('https://api.spotify.com/v1/artists/' + bandId, function(data) {
                 followers = data.followers.total;
-                console.log(maximum)
-                console.log(minimum)
-                console.log(followers)
                 if(followers < maximum && followers > minimum){
                     $('body').append('<p>success!</p>');
                 } else {
