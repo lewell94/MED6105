@@ -8,7 +8,7 @@ $(document).ready(function(){
     })
 });
 
-function listenerSearch() {
+function listenerSearchOne() {
 	$.get('https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=' + searchValue + '&api_key=2fc90f462963de3f1aa5889f105418ec&format=json', function(data) {
         $(data.artist).each(function(){
             listeners = this.stats.listeners;
@@ -77,17 +77,12 @@ function genreCheck() {
     })
 }
 
-function updateListenerCount() {
-    newListenersToSpend = listenersToSpend - listeners;
-    console.log(newListenersToSpend);
-}
-
 $(document).ready(function(){  
     listenersToSpend = 10000000;
     $('.text').append(" " + listenersToSpend);
     $('#submit-one').click(function(){
         searchValue = document.getElementById("search-one").value;
-        listenerSearch();
+        listenerSearchOne();
         genreCheck();
     })
     $('#submit-two').click(function(){
@@ -99,5 +94,7 @@ $(document).ready(function(){
         searchValue = document.getElementById("search-three").value;
         listenerSearchThree();
         genreCheck();
+    })
+    $('#full-save').click(function(){
     })
 });
