@@ -7,6 +7,7 @@
 function artistSearch() {
 	$.get('https://api.spotify.com/v1/search?q=' + searchValue + '&type=artist', function(data) {
         $(data.artists).each(function(){
+            console.log(data);
             allResults = this.items;
             bandId = (allResults[0].id);
             $.get('https://api.spotify.com/v1/artists/' + bandId, function(data) {
