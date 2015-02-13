@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+p.text {
+    text-align: center;
+    margin: 10px 0;
+}
+
+div.container {
+    width: 130px;
+    margin: auto;
+    text-align: center;
+}
+
+select {
+    width: 130px;
+    margin: 10px 0;
+}
+
+input {
+    margin: 10px auto;
+}
